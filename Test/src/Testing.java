@@ -16,5 +16,11 @@ public class Testing {
 		//Code revision added:
 		
 		System.out.println("2nd revision");
+		
 	}
+	
+	//Add method here
+			public void testMethod(){
+				//More code here
+			}
 }

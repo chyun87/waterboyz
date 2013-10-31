@@ -15,7 +15,8 @@ public class Testing {
 		
 		//Code revision added:
 		
-		System.out.println("2nd revision");
+		System.out.println("2nd iphone");
+		
 		
 	}
 	

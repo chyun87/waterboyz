@@ -20,7 +20,7 @@ public class Testing {
 	}
 	
 	//Add method here
-			public void testMethod(){
-				//More code here
-			}
+	public void testMethod(){
+		//More code here
+	}
 }

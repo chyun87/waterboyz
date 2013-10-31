@@ -10,6 +10,9 @@ public class Testing {
 		return smallest;
 	}
 	public static void main(String[] args){
+
+		int[] smallest = {1,4,3,2};
+		
 		int[] check = {1,2,3};
 		System.out.println("Hello World");
 		

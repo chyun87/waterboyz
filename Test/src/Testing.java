@@ -15,13 +15,12 @@ public class Testing {
 		
 		//Code revision added:
 		
-		System.out.println("2nd revision");
-		System.out.println("YEEEEE");
+		System.out.println("2nd check");
 		
 	}
 	
 	//Add method here
-			public void testMethod(){
-				//More code here
-			}
+	public void testMethod(){
+		//More code here
+	}
 }

@@ -15,7 +15,7 @@ public class Testing {
 		
 		//Code revision added:
 		
-		System.out.println("2nd check");
+		System.out.println("2nd iphone");
 		
 	}
 	

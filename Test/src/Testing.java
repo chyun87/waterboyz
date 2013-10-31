@@ -11,6 +11,8 @@ public class Testing {
 	}
 	public static void main(String[] args){
 		
+		int[] smallest = {1,4,3,2};
+		
 		System.out.println("Hello World");
 		
 		//Code revision added:

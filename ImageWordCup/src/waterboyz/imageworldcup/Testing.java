@@ -1,4 +1,6 @@
-package com.example.helloworld;
+package waterboyz.imageworldcup;
+
+import com.example.helloworld.R;
 
 import android.os.Bundle;
 import android.app.Activity;

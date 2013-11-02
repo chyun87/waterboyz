@@ -1,6 +1,6 @@
 package waterboyz.imageworldcup;
 
-import com.example.helloworld.R;
+import waterboyz.imageworldcup.R;
 
 import android.os.Bundle;
 import android.app.Activity;

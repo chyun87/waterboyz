@@ -17,6 +17,7 @@ import com.facebook.model.*;
 public class MainActivity extends Activity {
 
 	public final static String EXTRA_MESSAGE = "hello";
+	private String ACCESS_TOKEN = "";
 	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -36,24 +37,33 @@ public class MainActivity extends Activity {
 		    public void call(Session session, SessionState state, Exception exception) {
 		    	
 		    	if (session.isOpened()){
-		    		// make request to the /me API
-		            Request.newMeRequest(session, new Request.GraphUserCallback() {
-
-		              // callback after Graph API response with user object
-		              @Override
-		              public void onCompleted(GraphUser user, Response response) {
-		                if (user != null) {
-		                  TextView welcome = (TextView) findViewById(R.id.welcome);
-		                  welcome.setText("Hello " + user.getName() + "!");
-		                }
-		              }
-		            }).executeAsync();
+		    		loginSuccess(session);
 		    	}
 		    	
 		    }
 		});
 	}
-
+	
+	private void loginSuccess(Session session){
+		// make request to the /me API
+		ACCESS_TOKEN = session.getAccessToken();
+		
+		Request.newMeRequest(session, new Request.GraphUserCallback() {
+        	
+          // callback after Graph API response with user object
+          @Override
+          public void onCompleted(GraphUser user, Response response) {
+            if (user != null) {
+            	getAccessToFriendsList(user);
+            }
+          }
+        }).executeAsync();
+	}
+	
+	private void getAccessToFriendsList(GraphUser user){
+		TextView welcome = (TextView) findViewById(R.id.welcome);
+        welcome.setText("Hello " + user.getName() + "!");
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
